@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommarsemester 2026 - Boendejämförelse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sommarsemester 2026</h1>
+            <p class="subtitle">3 familjer, 12 personer, 1 vecka i Europa</p>
+            <div class="info-badges">
+                <span class="badge">28 juni - 5 juli</span>
+                <span class="badge">Budget: 50-60k SEK</span>
+                <span class="badge">Pool + 5 sovrum</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Karta -->
+        <section class="map-section">
+            <h2>Alla boenden på kartan</h2>
+            <div id="map"></div>
+            <div class="map-legend">
+                <span class="legend-item"><span class="dot top"></span> Top-kandidater</span>
+                <span class="legend-item"><span class="dot ok"></span> Bra alternativ</span>
+                <span class="legend-item"><span class="dot no"></span> Bort/För långt</span>
+            </div>
+        </section>
+
+        <!-- AI Rankings -->
+        <section class="rankings-section">
+            <h2>AI-rankingar jämförda</h2>
+            <p class="section-intro">Två olika AI:er har analyserat alla boenden. Här är deras topp 3:</p>
+
+            <div class="rankings-grid">
+                <!-- Claude Ranking -->
+                <div class="ranking-card claude">
+                    <div class="ranking-header">
+                        <h3>Claude</h3>
+                        <span class="ai-badge">Anthropic</span>
+                    </div>
+                    <div class="ranking-focus">
+                        <strong>Fokus:</strong> Caroline-kravet (promenadavstånd till by) + körsträcka från Hjärup
+                    </div>
+                    <ol class="ranking-list">
+                        <li>
+                            <div class="rank-item">
+                                <span class="rank-number">1</span>
+                                <div class="rank-content">
+                                    <strong>Bastide Saint-Joseph</strong>
+                                    <span class="location">Le Rouret, Frankrike</span>
+                                    <p>Riktig provensalsk by med 13 restauranger. Bäst på by-kravet!</p>
+                                    <a href="https://www.booking.com/Share-HpFRjW" target="_blank" class="link-btn">Visa boende</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-item">
+                                <span class="rank-number">2</span>
+                                <div class="rank-content">
+                                    <strong>Villa i Amelia</strong>
+                                    <span class="location">Umbrien, Italien</span>
+                                    <p>500m till restaurang, 1km till butik. Pool 16x7m. Betyg 4.96/5</p>
+                                    <a href="https://www.airbnb.se/rooms/19977255" target="_blank" class="link-btn">Visa boende</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-item">
+                                <span class="rank-number">3</span>
+                                <div class="rank-content">
+                                    <strong>Villa Luigi</strong>
+                                    <span class="location">Santo Stefano Belbo, Piemonte</span>
+                                    <p>Kortast körväg. Nära Alba & Barolo. Kapacitet 10+2.</p>
+                                    <a href="https://villaluigi-piemonte.com/contact/" target="_blank" class="link-btn">Visa boende</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- ChatGPT Ranking -->
+                <div class="ranking-card chatgpt">
+                    <div class="ranking-header">
+                        <h3>ChatGPT</h3>
+                        <span class="ai-badge">OpenAI</span>
+                    </div>
+                    <div class="ranking-focus">
+                        <strong>Fokus:</strong> Balans mellan körsträcka, bykänsla och huskvalitet
+                    </div>
+                    <ol class="ranking-list">
+                        <li>
+                            <div class="rank-item">
+                                <span class="rank-number">1</span>
+                                <div class="rank-content">
+                                    <strong>Vista dai Colli</strong>
+                                    <span class="location">Venegazzù, Veneto</span>
+                                    <p>Kortast resa + bra hus + hyfsad bykänsla. "Trygg, rationell vinnare"</p>
+                                    <a href="https://www.hometogo.se/rental/3de6888a66cfc5152fea829250996ea0" target="_blank" class="link-btn">Visa boende</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-item">
+                                <span class="rank-number">2</span>
+                                <div class="rank-content">
+                                    <strong>Villa Cetona</strong>
+                                    <span class="location">Cetona, Toscana</span>
+                                    <p>Riktig liten stad. Klassisk Toscana-känsla. 480m², 5 sovrum.</p>
+                                    <a href="https://www.hometogo.se/rental/481829713f1bf3cd" target="_blank" class="link-btn">Visa boende</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-item">
+                                <span class="rank-number">3</span>
+                                <div class="rank-content">
+                                    <strong>Villa Roccaverano</strong>
+                                    <span class="location">Alta Langa, Piemonte</span>
+                                    <p>Wow-faktor! Infinitypool, 180° utsikt. Risk för budgetstretch.</p>
+                                    <a href="https://www.housepiedmont.com/photos" target="_blank" class="link-btn">Visa boende</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ChatGPT Full Table -->
+        <section class="table-section">
+            <h2>ChatGPTs fullständiga analys</h2>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Boende</th>
+                            <th>Region</th>
+                            <th>Sovrum / Gäster</th>
+                            <th>Pool</th>
+                            <th>Promenad till by</th>
+                            <th>Körsträcka</th>
+                            <th>Budget</th>
+                            <th>Bedömning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight">
+                            <td><strong>Vista dai Colli</strong></td>
+                            <td>Veneto</td>
+                            <td>5 / 14</td>
+                            <td>Privat</td>
+                            <td><span class="status yellow">Liten ort</span></td>
+                            <td><span class="status green">Kortast</span></td>
+                            <td><span class="status yellow">OK</span></td>
+                            <td>Bra norr-läge men halv bykänsla</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agriturismo Valtidone</strong></td>
+                            <td>Lombardiet</td>
+                            <td>5 / 17</td>
+                            <td>Delad</td>
+                            <td><span class="status red">Isolerat</span></td>
+                            <td><span class="status green">Kort</span></td>
+                            <td><span class="status green">Bra</span></td>
+                            <td>Fint men bil till allt</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Villa Luigi</strong></td>
+                            <td>Piemonte</td>
+                            <td>5+ / 12</td>
+                            <td>Privat</td>
+                            <td><span class="status yellow">By nära</span></td>
+                            <td><span class="status green">Kort</span></td>
+                            <td><span class="status red">Dyr</span></td>
+                            <td>Drömhus - men dyrt</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Villa Roccaverano</strong></td>
+                            <td>Piemonte</td>
+                            <td>5 / 12</td>
+                            <td>Infinity</td>
+                            <td><span class="status yellow">Liten by</span></td>
+                            <td><span class="status green">Kort</span></td>
+                            <td><span class="status red">Premium</span></td>
+                            <td>Fantastiskt men premium</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>Villa Cetona</strong></td>
+                            <td>Toscana</td>
+                            <td>5 / 14</td>
+                            <td>Privat</td>
+                            <td><span class="status yellow">1-2 km</span></td>
+                            <td><span class="status yellow">Medel</span></td>
+                            <td><span class="status yellow">OK</span></td>
+                            <td>Stabil, klassisk Toscana</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Locanda Di Alberi</strong></td>
+                            <td>Toscana</td>
+                            <td>6 / 14</td>
+                            <td>Privat</td>
+                            <td><span class="status yellow">Nära by</span></td>
+                            <td><span class="status yellow">Medel</span></td>
+                            <td><span class="status yellow">OK</span></td>
+                            <td>Bra men B&B-känsla</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Le Quiete Dimore</strong></td>
+                            <td>Marche</td>
+                            <td>2 / 12*</td>
+                            <td>Delad</td>
+                            <td><span class="status yellow">Relativt nära</span></td>
+                            <td><span class="status red">Lång</span></td>
+                            <td><span class="status green">Bra</span></td>
+                            <td>För litet / splittrat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ca' Seppe</strong></td>
+                            <td>Marche</td>
+                            <td>4 / 12</td>
+                            <td>Privat</td>
+                            <td><span class="status red">Isolerat</span></td>
+                            <td><span class="status red">Lång</span></td>
+                            <td><span class="status green">Bra</span></td>
+                            <td>Fint men fel läge</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">* = kräver soffbäddar / ev fler enheter</p>
+        </section>
+
+        <!-- All Accommodations -->
+        <section class="all-accommodations">
+            <h2>Alla boenden</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Alla</button>
+                <button class="filter-btn" data-filter="top">Top-kandidater</button>
+                <button class="filter-btn" data-filter="ok">Bra alternativ</button>
+                <button class="filter-btn" data-filter="no">Borttagna</button>
+            </div>
+
+            <div class="accommodations-grid" id="accommodations-grid">
+                <!-- Cards will be inserted by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Driving Distance -->
+        <section class="driving-section">
+            <h2>Köravstånd från Hjärup</h2>
+            <div class="driving-grid">
+                <div class="driving-card">
+                    <h4>Piemonte</h4>
+                    <p class="distance">~1 600-1 700 km</p>
+                    <p class="time">15-17 timmar</p>
+                    <span class="nights">1 övernattning</span>
+                </div>
+                <div class="driving-card">
+                    <h4>Södra Frankrike</h4>
+                    <p class="distance">~1 700-1 800 km</p>
+                    <p class="time">16-18 timmar</p>
+                    <span class="nights">1 övernattning</span>
+                </div>
+                <div class="driving-card">
+                    <h4>Toscana</h4>
+                    <p class="distance">~1 800-1 900 km</p>
+                    <p class="time">17-19 timmar</p>
+                    <span class="nights">1-2 övernattningar</span>
+                </div>
+                <div class="driving-card">
+                    <h4>Umbrien</h4>
+                    <p class="distance">~1 900-2 000 km</p>
+                    <p class="time">18-20 timmar</p>
+                    <span class="nights">2 övernattningar</span>
+                </div>
+            </div>
+            <div class="hotel-tip">
+                <strong>Hotell på vägen:</strong>
+                <a href="https://maps.app.goo.gl/KLzbfLsowYT2sG9S8" target="_blank">Holiday Inn Express Fulda</a>
+                (4.6 stjärnor) - ligger ca halvvägs
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="requirements-section">
+            <h2>Viktiga krav</h2>
+            <div class="requirements-grid">
+                <div class="req-card priority">
+                    <h4>Caroline-kravet</h4>
+                    <p>Promenadavstånd till by med affär, restaurang och glass. Inte isolerat!</p>
+                </div>
+                <div class="req-card">
+                    <h4>Kapacitet</h4>
+                    <p>12 personer (6 vuxna + 6 barn), minst 5 sovrum</p>
+                </div>
+                <div class="req-card">
+                    <h4>Pool</h4>
+                    <p>Privat pool är ett måste</p>
+                </div>
+                <div class="req-card">
+                    <h4>Datum</h4>
+                    <p>Söndag 28 juni - Söndag 5 juli 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Sammanställt med hjälp av Claude & ChatGPT | Januari 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
