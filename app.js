@@ -56,9 +56,10 @@ accommodations.forEach(acc => {
 
     // Create popup content
     const popupContent = `
-        <div style="min-width: 200px;">
+        <div style="min-width: 220px;">
             <h4 style="margin: 0 0 5px 0;">${acc.name}</h4>
             <p style="margin: 0 0 8px 0; color: #666;">${acc.region}</p>
+            ${acc.price ? `<p style="margin: 0 0 8px 0; font-size: 1rem; font-weight: 600; color: #059669;">${acc.price}</p>` : ''}
             <p style="margin: 0 0 5px 0; font-size: 0.85rem;">
                 <strong>Sovrum:</strong> ${acc.bedrooms} |
                 <strong>Gäster:</strong> ${acc.guests}
@@ -67,7 +68,7 @@ accommodations.forEach(acc => {
                 <strong>Pool:</strong> ${acc.pool}
             </p>
             <p style="margin: 0 0 10px 0; font-size: 0.85rem;">
-                <strong>By-krav:</strong> ${acc.byKrav}
+                <strong>Nära by:</strong> ${acc.byKrav}
             </p>
             ${acc.claudeRank ? `<span style="background: #d97706; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 5px;">Claude #${acc.claudeRank}</span>` : ''}
             ${acc.chatgptRank ? `<span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">ChatGPT #${acc.chatgptRank}</span>` : ''}
@@ -127,6 +128,7 @@ function renderAccommodations(filter = 'all') {
         card.innerHTML = `
             <h4>${acc.name}</h4>
             <div class="region">${acc.region}</div>
+            ${acc.price ? `<div class="price">${acc.price} <span class="price-note">${acc.priceNote || ''}</span></div>` : ''}
             <div class="details">
                 <span class="detail">${acc.bedrooms} sovrum</span>
                 <span class="detail">${acc.guests} gäster</span>

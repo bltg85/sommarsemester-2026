@@ -339,7 +339,20 @@ h2 {
 .accommodation-card .region {
     color: #666;
     font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.accommodation-card .price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #059669;
     margin-bottom: 12px;
+}
+
+.accommodation-card .price-note {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #888;
 }
 
 .accommodation-card .details {
