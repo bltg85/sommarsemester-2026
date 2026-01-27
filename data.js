@@ -18,7 +18,7 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Utmärkt - Riktig by med 13 restauranger",
         link: "https://www.booking.com/Share-HpFRjW",
-        comment: "Bäst på Caroline-kravet. Provensalsk by med allt på gångavstånd."
+        comment: "Bäst på by-kravet. Provensalsk by med allt på gångavstånd."
     },
     {
         id: 2,

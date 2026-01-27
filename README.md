@@ -18,7 +18,7 @@ Tre familjer planerar en gemensam sommarsemester i Europa 28 juni - 5 juli 2026.
 - **Deltagare:** 6 vuxna + 6 barn
 - **Budget:** 50 000 - 60 000 SEK
 - **Måsten:** Pool, minst 5 sovrum
-- **Caroline-kravet:** Promenadavstånd till by med affär/restaurang
+- **Nära by:** Promenadavstånd till by med affär/restaurang
 
 ## Top 3 enligt Claude
 
