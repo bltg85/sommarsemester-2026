@@ -75,15 +75,23 @@ const accommodations = [
         bedrooms: 5,
         guests: 14,
         pool: "Privat",
-        price: "~47 500 kr",
-        priceNote: "Från HomeToGo",
+        price: "~46 000 kr",
+        priceNote: "Hyra 42 000 + städ 4 320 + el",
+        priceDetails: {
+            hyra: "€3 500 (~42 000 kr)",
+            slutstad: "€360 (betalas på plats)",
+            sanglinne: "Ingår",
+            turistskatt: "Ev. ingen",
+            deposition: "Troligen ingen",
+            ovrigt: "El tillkommer: ~€0,90/kWh"
+        },
         claudeScore: 3,
         chatgptScore: 5,
         claudeRank: null,
         chatgptRank: 1,
         byKrav: "OK - Liten ort med begränsat utbud",
         link: "https://www.hometogo.se/rental/3de6888a66cfc5152fea829250996ea0",
-        comment: "ChatGPTs favorit. Kortast resa + bra hus. Sauna ingår."
+        comment: "ChatGPTs favorit. Kortast resa + bra hus. Sauna ingår. OBS: El tillkommer."
     },
     {
         id: 5,
@@ -95,16 +103,24 @@ const accommodations = [
         category: "top",
         bedrooms: 5,
         guests: 14,
-        pool: "Privat",
-        price: "~49 200 kr",
-        priceNote: "Från HomeToGo",
+        pool: "Privat + jacuzzi",
+        price: "~50 400 kr",
+        priceNote: "All-inclusive! Städ+linne ingår",
+        priceDetails: {
+            hyra: "€4 200 (~50 400 kr) all-inclusive",
+            slutstad: "Ingår",
+            sanglinne: "Ingår (byte 1g/vecka)",
+            turistskatt: "€1/pers/natt (≥12 år, kontant)",
+            deposition: "Ingen (ZeroDep-försäkring)",
+            ovrigt: "El, vatten, gas ingår"
+        },
         claudeScore: 3,
         chatgptScore: 4,
         claudeRank: null,
         chatgptRank: 2,
         byKrav: "Bra - Cetona är en riktig liten stad",
         link: "https://www.hometogo.se/rental/481829713f1bf3cd",
-        comment: "480m². Klassisk Toscana-känsla. By 1-2 km bort."
+        comment: "480m². All-inclusive pris! Städ, linne, el, vatten ingår. Jacuzzi."
     },
     {
         id: 6,
@@ -113,19 +129,27 @@ const accommodations = [
         country: "Italien",
         lat: 44.5917,
         lng: 8.2750,
-        category: "top",
+        category: "no",
         bedrooms: 5,
         guests: 12,
         pool: "Infinity",
-        price: "~59 000 kr",
-        priceNote: "Över budget!",
+        price: "~100 800 kr",
+        priceNote: "LÅNGT över budget!",
+        priceDetails: {
+            hyra: "€8 400 (~100 800 kr) högsäsong",
+            slutstad: "Ingår",
+            sanglinne: "Ingår",
+            turistskatt: "Ev. låg (ej angiven)",
+            deposition: "€1 500 (återbetalas, via kort)",
+            ovrigt: "All service ingår"
+        },
         claudeScore: 2,
         chatgptScore: 4,
         claudeRank: null,
         chatgptRank: 3,
         byKrav: "OK - Liten by nära",
         link: "https://www.housepiedmont.com/photos",
-        comment: "Wow-faktor! 180° utsikt, modern design. Risk för budgetstretch."
+        comment: "BORT - 100 800 kr! Dubbla budgeten. Wow-hus men orealistiskt pris."
     },
 
     // BRA ALTERNATIV

@@ -279,6 +279,35 @@ h2 {
     color: #666;
 }
 
+/* Price summary */
+.price-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.price-verdict {
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.price-verdict.best {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.price-verdict.good {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.price-verdict.bad {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
 /* Accommodations Grid */
 .filter-buttons {
     display: flex;
