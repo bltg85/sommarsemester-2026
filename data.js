@@ -790,7 +790,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Nära by",
         link: "https://www.vrbo.com/sv-se/semesterhus/p11815284",
-        comment: "Sofia hittade. Bra läge i Piemonte, kortare körväg."
+        comment: "Sofia hittade. Bra läge i Piemonte, kortare körväg.",
+        addedDate: "2026-01-29"
     },
     {
         id: 28,
@@ -811,7 +812,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "I utkanten av by",
         link: "https://www.vrbo.com/sv-se/semesterhus/p2841368",
-        comment: "Sofia: 'Blev stormförtjust direkt!' Sofie: 'Åh!! Stormförtjust!' Ligger i Piemonte, bra körläge."
+        comment: "Sofia: 'Blev stormförtjust direkt!' Sofie: 'Åh!! Stormförtjust!' Ligger i Piemonte, bra körläge.",
+        addedDate: "2026-01-29"
     },
     {
         id: 29,
@@ -832,7 +834,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Nära Bubbio",
         link: "https://www.vrbo.com/sv-se/semesterhus/p95760",
-        comment: "Sofia hittade. I Piemonte, bra körläge."
+        comment: "Sofia hittade. I Piemonte, bra körläge.",
+        addedDate: "2026-01-29"
     },
     {
         id: 30,
@@ -853,7 +856,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Vacker omgivning nära Lucca",
         link: "https://t.vrbo.io/izQk5Qt2j0b",
-        comment: "Sofie: 'me like alot!!!!!' Sofia: 'Riktigt fint! En liten pärla. Jag gillar också Casa Cavesi!' Nära Pisa."
+        comment: "Sofie: 'me like alot!!!!!' Sofia: 'Riktigt fint! En liten pärla. Jag gillar också Casa Cavesi!' Nära Pisa.",
+        addedDate: "2026-01-29"
     },
     {
         id: 31,
@@ -874,7 +878,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Nära Lucca, vacker omgivning",
         link: "https://www.hometogo.se/rental/663f69f9ed80569d637356bff9743c48",
-        comment: "Sofia: 'Huset i Lucca va superfint och ligger ju vacker omgivning'. Nära Pisa för utflykt."
+        comment: "Sofia: 'Huset i Lucca va superfint och ligger ju vacker omgivning'. Nära Pisa för utflykt.",
+        addedDate: "2026-01-29"
     },
     {
         id: 32,
@@ -895,7 +900,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Nära by i Alpilles",
         link: "https://www.provenceholidays.com/en/holiday-rental/alpilles-maison-du-gres-1",
-        comment: "Caroline hittade. Sofie: 'Också suuuupermysigt, modernt på samma gång'."
+        comment: "Caroline hittade. Sofie: 'Också suuuupermysigt, modernt på samma gång'.",
+        addedDate: "2026-01-29"
     },
     {
         id: 33,
@@ -916,7 +922,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Nära Avignon",
         link: "https://www.provenceholidays.com/en/holiday-rental/avignon-mas-audrey",
-        comment: "Caroline hittade. 59 000 kr inkl allt. Sofia: 'Så fina hus du hittar nu Carro!'"
+        comment: "Caroline hittade. 59 000 kr inkl allt. Sofia: 'Så fina hus du hittar nu Carro!'",
+        addedDate: "2026-01-29"
     },
     {
         id: 34,
@@ -937,7 +944,8 @@ const accommodations = [
         chatgptRank: null,
         byKrav: "Toscana",
         link: "https://landfolk.com/sv/l/8810d2e0",
-        comment: "Sofia: 'Även Montesoro' som favorit."
+        comment: "Sofia: 'Även Montesoro' som favorit.",
+        addedDate: "2026-01-29"
     }
 ];
 

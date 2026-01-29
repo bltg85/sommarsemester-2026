@@ -1,8 +1,9 @@
 // Gruppens favoriter (ID:n för boenden som någon har röstat på)
+// Uppdaterat 29 jan 2026
 const groupFavorites = {
-    'Sofie': { first: 10, second: null, third: null },      // Novasol Barolo
-    'Sofia': { first: 9, second: 10, third: null },         // Arezzo, Barolo
-    'Caroline': { first: 4, second: null, third: null },    // Vista dai Colli
+    'Sofie': { first: 1, second: 30, third: 28 },           // Bastide Saint-Joseph, Casa Cavesi, Castelletto d'Erro
+    'Sofia': { first: 30, second: 31, third: 28 },          // Casa Cavesi, Villa Pecheto, Castelletto d'Erro
+    'Caroline': { first: 4, second: 32, third: 33 },        // Vista dai Colli, Maison du Grès, Mas Audrey
     'Henrik': { first: null, second: null, third: null },
     'Anders': { first: null, second: null, third: null },
     'Stefan': { first: null, second: null, third: null }
@@ -127,9 +128,13 @@ function createPopupContent(acc, showVotes = false) {
         ? `<a href="${acc.googleMaps}" target="_blank" style="color: #059669; font-size: 0.8rem; margin-right: 10px;">Google Maps</a>`
         : '';
 
+    const newBadgePopup = acc.addedDate
+        ? `<span style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 600; margin-left: 6px;">🆕 ${acc.addedDate}</span>`
+        : '';
+
     return `
         <div style="min-width: 240px;">
-            <h4 style="margin: 0 0 5px 0;">${acc.name}</h4>
+            <h4 style="margin: 0 0 5px 0;">${acc.name}${newBadgePopup}</h4>
             <p style="margin: 0 0 8px 0; color: #666;">${acc.region}</p>
             ${addressHtml}
             ${voteHtml}
@@ -246,8 +251,13 @@ function renderAccommodations(filter = 'all') {
                </div>`
             : '';
 
+        // Visa "NY"-badge om boendet har addedDate
+        const newBadge = acc.addedDate
+            ? `<span style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-left: 8px;">🆕 ${acc.addedDate}</span>`
+            : '';
+
         card.innerHTML = `
-            <h4>${acc.name} ${isFavorite ? '⭐' : ''}</h4>
+            <h4>${acc.name} ${isFavorite ? '⭐' : ''}${newBadge}</h4>
             <div class="region">${acc.region}</div>
             ${voteHtml}
             ${acc.price ? `<div class="price">${acc.price} <span class="price-note">${acc.priceNote || ''}</span></div>` : ''}
