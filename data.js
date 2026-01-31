@@ -767,8 +767,7 @@ const accommodations = [
         byKrav: "OK - Café i byn, 15 min bil till större utbud",
         link: "https://www.herault-tourisme.com/fr/fiche/hebergements-locatifs/la-villa-occitane-12-personnes-vendemian_TFOHLOLAR034V52GBSZ/",
         comment: "6 sovrum, AC, poolhus med utekök! 30 km från Montpellier, nära Medelhavet. Längst körväg (~20h)."
-    }
-];
+    },
 
     // NYA BOENDEN FRÅN SENASTE CHATTEN (29 jan)
     {
